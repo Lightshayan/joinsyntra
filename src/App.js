@@ -391,7 +391,7 @@ export default function App() {
 
       <footer style={{position:'relative',zIndex:10,borderTop:'1px solid rgba(255,255,255,.05)',padding:'2.25rem 0'}}>
         <div style={{maxWidth:1100,margin:'0 auto',padding:'0 2rem',display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:16}}>
-          <img src="/syntra.png" alt="Syntra" style={{height:18,width:'auto',objectFit:'contain'}} />
+          <img src="https://github.com/Lightshayan/joinsyntra/blob/main/Syntra.png?raw=true" alt="Syntra" style={{height:18,width:'auto',objectFit:'contain'}} />
           <div style={{display:'flex',gap:24,fontSize:11,opacity:.4}}>
             <a href="https://www.linkedin.com/company/joinsyntra/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://www.instagram.com/joinsyntra/" target="_blank" rel="noreferrer">Instagram</a>
