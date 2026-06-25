@@ -28,7 +28,7 @@ function Nav() {
       borderBottom:sc?'1px solid rgba(255,255,255,0.06)':'none',
       transition:'all 0.4s'}}>
       <div style={{maxWidth:1100,margin:'0 auto',padding:'0 2rem',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
-        <span style={{fontSize:15,fontWeight:800,letterSpacing:'0.12em',color:S,textTransform:'uppercase'}}>Syntra</span>
+        <img src="/syntra.png" alt="Syntra" style={{height:22,width:'auto',objectFit:'contain'}} />
         <div style={{display:'flex',gap:32,fontSize:13,fontWeight:500}}>
           {['Events','Volunteer','Partner','Resources'].map(l => (
             <a key={l} href={`${l.toLowerCase()}.html`} style={{color:B,opacity:0.6,textDecoration:'none',transition:'opacity 0.2s'}}
@@ -391,7 +391,7 @@ export default function App() {
 
       <footer style={{position:'relative',zIndex:10,borderTop:'1px solid rgba(255,255,255,.05)',padding:'2.25rem 0'}}>
         <div style={{maxWidth:1100,margin:'0 auto',padding:'0 2rem',display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:16}}>
-          <div style={{fontSize:10,fontWeight:700,letterSpacing:'.25em',textTransform:'uppercase',color:S}}>Screen • Refer • Connect</div>
+          <img src="/syntra.png" alt="Syntra" style={{height:18,width:'auto',objectFit:'contain'}} />
           <div style={{display:'flex',gap:24,fontSize:11,opacity:.4}}>
             <a href="https://www.linkedin.com/company/joinsyntra/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://www.instagram.com/joinsyntra/" target="_blank" rel="noreferrer">Instagram</a>
