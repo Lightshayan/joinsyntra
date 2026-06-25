@@ -47,7 +47,7 @@ function Marquee({ items, reverse }) {
     <div style={{overflow:'hidden',width:'100%',maskImage:'linear-gradient(to right,transparent,black 10%,black 90%,transparent)'}}>
       <motion.div
         animate={{x: reverse ? ['0%','-50%'] : ['-50%','0%']}}
-        transition={{duration:30,repeat:Infinity,ease:'linear'}}
+        transition={{duration:55,repeat:Infinity,ease:'linear'}}
         style={{display:'flex',gap:12,width:'max-content'}}>
         {doubled.map((item,i) => (
           <div key={i} style={{
@@ -166,7 +166,7 @@ export default function App() {
               </span>
             </h1>
             <p style={{fontSize:mob?16:19,color:DIM,maxWidth:480,lineHeight:1.78,marginBottom:40}}>
-              Syntra runs free pop-up health screenings in underserved communities. No insurance. No appointments. Walk in.
+              Syntra runs free pop-up health screenings in underserved communities. No insurance required. No appointments needed. Walk in.
             </p>
             <div style={{display:'flex',gap:12,flexWrap:'wrap',flexDirection:mob?'column':'row',maxWidth:mob?240:'none'}}>
               {btn('events.html','See Upcoming Events',true)}
@@ -185,7 +185,7 @@ export default function App() {
           <div style={{textAlign:'center',marginBottom:36}}>
             <div style={{fontFamily:'monospace',fontSize:10,fontWeight:700,letterSpacing:'.22em',textTransform:'uppercase',color:S,marginBottom:10}}>What We Screen For</div>
             <h2 style={{fontSize:mob?24:34,fontWeight:800,letterSpacing:'-.02em'}}>Services vary by event.</h2>
-            <p style={{fontSize:14,color:DIM,marginTop:10}}>Every pop-up is tailored to community need.</p>
+            <p style={{fontSize:14,color:DIM,marginTop:10}}>Every pop-up is tailored to the needs of the community it serves.</p>
           </div>
         </Fade>
         <div style={{display:'flex',flexDirection:'column',gap:12}}>
@@ -207,9 +207,9 @@ export default function App() {
             {[
               {n:'01',h:'Free',b:'No cost at every event. No exceptions.'},
               {n:'02',h:'Close',b:'Deployed where the need is highest, not where it\'s easiest.'},
-              {n:'03',h:'Simple',b:'Walk in, get screened, leave with answers.'},
+              {n:'03',h:'Simple',b:'Walk in, get screened, and leave with answers.'},
               {n:'04',h:'Referred',b:'Every flag connects you to real follow-up care.'},
-              {n:'05',h:'Yours',b:'Results in hand. No portal. No wait.'},
+              {n:'05',h:'Yours',b:'Results in hand. No portal. No waiting.'},
             ].map((item,i) => (
               <Fade key={item.n} delay={i*.07}>
                 <div style={{padding:'1.75rem 1.25rem',borderTop:`2px solid ${i===0?S:'rgba(255,255,255,0.08)'}`,paddingTop:'1.5rem'}}>
@@ -234,7 +234,7 @@ export default function App() {
             {[
               {n:'1',h:'Find an event.',b:'Check the events page for upcoming locations, available services, and how to pre-register.'},
               {n:'2',h:'Check in. Move through.',b:'Register at the door, move through screening stations at your own pace, and leave with your results.'},
-              {n:'3',h:'Get connected.',b:'Anything flagged gets a referral to local care. You leave knowing your numbers and your next step.'},
+              {n:'3',h:'Get connected.',b:'Anything flagged connects you to local care. You leave knowing your numbers and your next step.'},
             ].map((s,i) => (
               <Fade key={s.n} delay={i*.1}>
                 <div style={{padding:mob?'0':'2rem 2.5rem',borderLeft:mob?'none':`1px solid rgba(255,255,255,${i===0?.16:.05})`,paddingLeft:mob?0:'2.5rem'}}>
@@ -254,7 +254,7 @@ export default function App() {
           <Fade>
             <div style={{marginBottom:52,maxWidth:500}}>
               <div style={{fontFamily:'monospace',fontSize:10,fontWeight:700,letterSpacing:'.22em',textTransform:'uppercase',color:S,marginBottom:12}}>The Gap</div>
-              <h2 style={{fontSize:mob?26:40,fontWeight:800,letterSpacing:'-.02em',lineHeight:1.2}}>The need is real. The access isn't.</h2>
+              <h2 style={{fontSize:mob?26:40,fontWeight:800,letterSpacing:'-.02em',lineHeight:1.2}}>The need is real. The access is not.</h2>
             </div>
           </Fade>
           <div style={{display:'grid',gridTemplateColumns:mob?'1fr 1fr':'repeat(4,1fr)',gap:mob?'2.5rem 1.5rem':40}}>
@@ -277,7 +277,7 @@ export default function App() {
             <div style={{fontFamily:'monospace',fontSize:10,fontWeight:700,letterSpacing:'.22em',textTransform:'uppercase',color:S,marginBottom:16}}>About Syntra</div>
             <h2 style={{fontSize:mob?26:40,fontWeight:800,letterSpacing:'-.02em',lineHeight:1.2,marginBottom:24}}>Built by students.<br/>For communities.</h2>
             <p style={{fontSize:15,color:DIM,lineHeight:1.85,marginBottom:16}}>
-              Millions go unscreened every year — not from lack of care, but lack of access. Syntra deploys directly into those communities, removing every barrier we can.
+              Millions go unscreened every year. Not from lack of care, but lack of access. Syntra deploys directly into those communities and removes every barrier it can.
             </p>
             <p style={{fontSize:15,color:DIM,lineHeight:1.85}}>Student-led. Volunteer-powered. Community-driven.</p>
           </Fade>
@@ -326,6 +326,40 @@ export default function App() {
               </Fade>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── Partner ── */}
+      <section style={{position:'relative',zIndex:10,background:'rgba(255,255,255,.012)',borderTop:'1px solid rgba(255,255,255,.05)',padding:mob?'4rem 1.5rem':'6rem 2rem'}}>
+        <div style={{maxWidth:1100,margin:'0 auto'}}>
+          <Fade>
+            <div style={{fontFamily:'monospace',fontSize:10,fontWeight:700,letterSpacing:'.22em',textTransform:'uppercase',color:S,marginBottom:12}}>Partner With Us</div>
+            <h2 style={{fontSize:mob?26:40,fontWeight:800,letterSpacing:'-.02em',marginBottom:16}}>Bring Syntra to your community.</h2>
+            <p style={{fontSize:15,color:DIM,lineHeight:1.8,maxWidth:520,marginBottom:48}}>We work with community centers, faith organizations, clinics, and institutions to bring free health screenings directly to the people they serve.</p>
+          </Fade>
+          <div style={{display:'grid',gridTemplateColumns:mob?'1fr':'repeat(3,1fr)',gap:12,marginBottom:40}}>
+            {[
+              {h:'Venues',b:'Have a space? We handle everything else. Setup, volunteers, supplies, and breakdown are all on us.'},
+              {h:'Healthcare Partners',b:'Clinics and providers can co-host events, offer follow-up care, or supply medical oversight for our screenings.'},
+              {h:'Institutional Partners',b:'Schools, nonprofits, and government agencies can collaborate to identify high-need areas and co-deploy events.'},
+            ].map((s,i)=>(
+              <Fade key={s.h} delay={i*.08}>
+                <div style={{background:'rgba(255,255,255,.03)',border:'1px solid rgba(255,255,255,.07)',borderRadius:16,padding:28,transition:'all 0.25s'}}
+                  onMouseEnter={e=>{e.currentTarget.style.borderColor='rgba(255,255,255,.18)';e.currentTarget.style.transform='translateY(-3px)'}}
+                  onMouseLeave={e=>{e.currentTarget.style.borderColor='rgba(255,255,255,.07)';e.currentTarget.style.transform='none'}}>
+                  <h3 style={{fontSize:16,fontWeight:700,marginBottom:10}}>{s.h}</h3>
+                  <p style={{fontSize:13,color:DIM,lineHeight:1.75}}>{s.b}</p>
+                </div>
+              </Fade>
+            ))}
+          </div>
+          <Fade delay={.15}>
+            <a href="partner.html" style={{display:'inline-block',background:S,color:C,fontWeight:700,fontSize:14,padding:'13px 28px',borderRadius:10,transition:'all 0.2s'}}
+              onMouseEnter={e=>{e.currentTarget.style.opacity='.82';e.currentTarget.style.transform='translateY(-2px)'}}
+              onMouseLeave={e=>{e.currentTarget.style.opacity='1';e.currentTarget.style.transform='none'}}>
+              Become a Partner
+            </a>
+          </Fade>
         </div>
       </section>
 
